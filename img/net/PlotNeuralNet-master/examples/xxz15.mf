@@ -1,0 +1,152 @@
+%  Created by MMF/LaTeX (ver. 1.21 [June 1996]) at May 5, 2022.
+
+%  Based on ``alternate parameter files'' prepared by
+%  John Sauter and Karl Berry (Version 1.4 [1992])
+
+%  This font is the modification of
+%  Computer Modern Roman family
+%  created by D.E.Knuth [driver=roman.mf]
+
+%  Composition       : bold=4, x=2, sf=0.15, tt=0, fib=0, funny=0
+%  Scale char size   : widht=1, height=1, asc=1.5, desc=1.5, math=1
+%  Scale char weight : bold line factor=1, thin line factor=1
+%                      contrast type=s, contrast factor=0.5
+%  Scale variables   : join_lines# * 1, notch_cut# * 1,
+%                      dot_size# * 1, dish# * 1
+%  Auto correction   : OFF
+%  Add font tricks   : foreground=Z, background=z, shadow=Z, transform=
+
+if unknown cmbase: input cmbase fi    % 
+
+font_identifier:="CMR/MFF";
+font_size 15.00000pt#;
+
+u#:=40.12112/36pt#;    % unit width
+width_adj#:=95.10269/36pt#;    % width adjustment for certain characters
+serif_fit#:=-1.60571/36pt#;    % extra sidebar near lowercase serifs
+cap_serif_fit#:=16.48168/36pt#;    % extra sidebar near uppercase serifs
+letter_fit#:=7.02468/36pt#;    % extra space added to all sidebars
+
+body_height#:=606.79885/36pt#;    % height of tallest characters
+x_height#:=263.12356/36pt#;    % height of lowercase without ascenders
+asc_height#:=562.50000/36pt#;    % height of lowercase ascenders
+cap_height#:=563.90287/36pt#;    % height of caps
+fig_height#:=523.15843/36pt#;    % height of numerals
+math_axis#:=134.99871/36pt#;    % axis of symmetry for math symbols
+bar_height#:=117.21919/36pt#;    % height of crossbar in lowercase e
+comma_depth#:=148.98080/36pt#;    % depth of comma below baseline
+desc_depth#:=157.40090/36pt#;    % depth of lowercase descenders
+
+crisp#:=0.00000/36pt#;    % diameter of serif corners
+tiny#:=26.80169/36pt#;    % diameter of rounded corners
+fine#:=18.79248/36pt#;    % diameter of sharply rounded corners
+stem#:=132.98101/36pt#;    % lowercase stem breadth
+cap_stem#:=148.72453/36pt#;    % uppercase stem breadth
+thin_join#:=22.47196/36pt#;    % width of extrafine details
+hair#:=54.61624/36pt#;    % lowercase hairline breadth
+curve#:=133.13587/36pt#;    % lowercase curve breadth
+ess#:=114.67991/36pt#;    % breadth in middle of lowercase s
+flare#:=116.62730/36pt#;    % diameter of bulbs or breadth of terminals
+dot_size#:=142.08114/36pt#;    % diameter of dots
+cap_hair#:=55.31629/36pt#;    % uppercase hairline breadth
+cap_curve#:=147.74531/36pt#;    % uppercase curve breadth
+cap_ess#:=150.14064/36pt#;    % breadth in middle of uppercase s
+rule_thickness#:=140.72726/100pt#;    % thickness of lines in math symbols
+
+dish#:=0.85006/36pt#;    % amount erased at top or bottom of serifs
+bracket#:=-33.81713/36pt#;    % vertical distance from serif base to tangent
+jut#:=29.94415/36pt#;    % protrusion of lowercase serifs
+cap_jut#:=59.97328/36pt#;    % protrusion of uppercase serifs
+beak_jut#:=15.59408/36pt#;    % horizontal protrusion of beak serifs
+beak#:=89.31567/36pt#;    % vertical protrusion of beak serifs
+vair#:=40.52787/36pt#;    % vertical diameter of hairlines
+notch_cut#:=1441.00271/100pt#;    % maximum breadth above or below notches
+bar#:=42.03901/36pt#;    % lowercase bar thickness
+slab#:=42.52122/36pt#;    % serif and arm thickness
+cap_bar#:=42.24755/36pt#;    % uppercase bar thickness
+cap_band#:=41.88900/36pt#;    % uppercase thickness above/below lobes
+cap_notch_cut#:=1445.95686/100pt#;    % max breadth above/below uppercase notches
+serif_drop#:=-0.70909/36pt#;    % vertical drop of sloped serifs
+apex_corr#:=1.02902/36pt#;    % extra width at diagonal junctions
+
+o#:=-2.66090/36pt#;    % amount of overshoot for curves
+apex_o#:=-4.13992/36pt#;    % amount of overshoot for diagonal junctions
+
+slant:=0;    % tilt ratio (Delta x/Delta y)
+fudge:=1.00000;    % factor applied to weights of heavy characters
+math_spread:=2.07685;    % extra openness of math symbols
+superness:=0.78779;    % parameter for superellipses
+superpull:=-0.01750;    % extra openness inside bowls
+beak_darkness:=0.44497;    % fraction of triangle inside beak serifs
+
+stem_corr#:=5.000030/36pt#;    % for small refinements of stem breadth
+vair_corr#:=3.000018/36pt#;    % for small refinements of hairline height
+
+ligs:=2;    % level of ligatures to be included
+
+square_dots:=false;    % should dots be square?
+hefty:=false;    % should we try hard not to be overweight?
+serifs:=true;    % should serifs and bulbs be attached?
+monospace:=false;    % should all characters have the same width?
+variant_g:=false;    % should an italic-style g be used?
+low_asterisk:=false;    % should the asterisk be centered at the axis?
+math_fitting:=false;    % should math-mode spacing be used?
+
+%  This part is taken from "The ABC's of Special Effects"
+%  by Georgia K.M. Tobin in TUGBoat 9 (1988) No 1 pp. 15--18
+%  and from "Outline Fonts with Metafont"
+%  by Doug Henderson in TUGBoat 10 (1989) No 1 pp. 36--38.
+
+   shadowstepH:=+hround(0.075*hair#*hppp);
+   shadowstepV:=-vround(0.075*hair#*hppp);
+
+   HCntSize#:=0.075*hair#;
+   HCntX:=hround(HCntSize#*hppp); if (HCntX<1): HCntX:=1; fi
+   HCntY:=vround(HCntSize#*hppp); if (HCntY<1): HCntY:=1; fi
+
+def TrickChar = 
+   if slant>0:
+      rbXM:=hround(slant*chardp*hppp);
+      rbXP:=hround(slant*charht*hppp);
+   else:
+      rbXM:=hround((-slant)*charht*hppp);
+      rbXP:=hround((-slant)*chardp*hppp);
+   fi;
+   rbXM:=-curve-rbXM; rbXP:=w+curve+rbXP;
+   rbYP:=body_height+curve; rbYM:=-body_depth-curve;
+   rbYM:=rbYM-shadowstepV; rbXP:=rbXP+shadowstepH;
+   cullit; picture NormalChar;
+   NormalChar:=currentpicture;
+   clearit;
+   currentpicture:=NormalChar shifted (shadowstepH, shadowstepV);
+   picture ShadowPict; ShadowPict:=currentpicture;
+   clearit; currentpicture:=ShadowPict-NormalChar;
+   cullit; picture ShadowChar; ShadowChar:=currentpicture;
+   clearit; currentpicture:=NormalChar+ShadowChar;
+   cullit; picture ShadowBoxChar; ShadowBoxChar:=currentpicture;
+   clearit; picture BackChar; BackChar:=currentpicture;
+   clearit;
+   currentpicture:=NormalChar;
+   cull currentpicture keeping (1,infinity);
+   picture TempPict; TempPict:=currentpicture;
+   cull currentpicture keeping (1,1) withweight 3;
+   addto currentpicture also TempPict - TempPict shifted (-HCntX,0)
+      - TempPict shifted (+HCntX,0) - TempPict shifted (0,-HCntY) - TempPict shifted (0,+HCntY);
+   cull currentpicture keeping (1,4);
+   picture MainChar; MainChar:=currentpicture;
+   clearit;
+   currentpicture:=ShadowChar;
+   cull currentpicture keeping (1,infinity);
+   picture TempPict; TempPict:=currentpicture;
+   cull currentpicture keeping (1,1) withweight 3;
+   addto currentpicture also TempPict - TempPict shifted (-HCntX,0)
+      - TempPict shifted (+HCntX,0) - TempPict shifted (0,-HCntY) - TempPict shifted (0,+HCntY);
+   cull currentpicture keeping (1,4);
+   picture SMainChar; SMainChar:=currentpicture;
+   clearit; currentpicture:=BackChar+MainChar+SMainChar;
+enddef;
+
+extra_endchar := extra_endchar & "; TrickChar";
+
+generate roman    % switch to the driver file
+
