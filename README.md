@@ -12,7 +12,7 @@
 
 主要提出了一种从多谱线特征层融合角度提出了基于格拉姆角场（Gramian angular field）与多尺度卷积神经网络（multi-scale convolutional neural network）的光谱特征提取方法，使用格拉姆角场将一维光谱信号变换为二维图像增强了信号特征，使用多尺度卷积神经网络提取图像特征，利用特征向量回归计算金属离子浓度。
 
-
+A spectral feature extraction method based on the Gramian Angular Field (GAF) and a multi-scale convolutional neural network (CNN) is primarily proposed from the perspective of fusing features across multiple spectral lines. The Gramian Angular Field is employed to transform one-dimensional spectral signals into two-dimensional images, enhancing signal characteristics. The multi-scale convolutional neural network is then used to extract features from the images, and feature vectors are utilized for the regression calculation of metal ion concentrations.
 
 配合./doc中的中文论文原稿和[T. Liu, C. Zhou, C. Fang, H. Zhu, Y. Li and J. Wu, "A Scattered Liquid Component Analysis Approach Based on Spectral Visual Encoding and Fusion," in IEEE Sensors Journal, doi: 10.1109/JSEN.2023.3336797.](https://ieeexplore.ieee.org/document/10341277) 正式发表论文参考
 
